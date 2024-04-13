@@ -26,7 +26,7 @@ $conexao->conectaDB();
 <body>
 
     <div class="container">
-        <form action="geradorrifa.php" method="post">
+        <form action="gerador.php" method="post">
             <h3 class="text-center mt-5 p-5 titulo">Cadastro Comprador</h3>
             <div class="row mt-3">
                 <div class="col">
