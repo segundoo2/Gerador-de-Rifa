@@ -1,10 +1,3 @@
-<?php
-include("Class/ClassConexao.php");
-$conexao = new ClassConexao();
-$conexao->conectaDB();
-
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -19,6 +12,9 @@ $conexao->conectaDB();
             box-shadow: 0px 0px 1px black;
             border-radius: 5px;
             background-color: lightgrey;
+        }
+        #estado {
+            width: 60px;
         }
     </style>
 </head>
@@ -46,19 +42,19 @@ $conexao->conectaDB();
             </div>
 
             <div class="row">
-                <div class="col w-25">
-                    <label for="estado">Cidade</label>
-                    <input type="text" class="form-control" name="cidade" value="Natal" disabled>
+                <div class="col">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" name="cidade" value="Natal">
                 </div>
                     
                 <div class="col">
                     <label for="estado">Estado</label>
-                    <input type="text" class="form-control" name="estado" value="RN" disabled>
+                    <input type="text" class="form-control" id="estado" name="estado" value="RN">
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col d-flex justify-content-center mt-3">
-                    <button type="submit" class="btn btn-success w-25">Cadastrar comprador</button>
+                    <button type="submit" class="btn btn-lg btn-success w-25">Cadastrar comprador</button>
                 </div>
             </div>
         </form>
