@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ':cidade' => $cidade,
             ':estado' => $estado
         ];
-        $query = $database->execute_non_query("INSERT INTO dados_comprador (nome, contato, endereço, cidade, estado) VALUES (:nome, :contato, :endereco, :cidade, :estado)", $params);
+        $query = $database->execute_non_query("INSERT INTO dados_comprador (nome, contato, endereco, cidade, estado) VALUES (:nome, :contato, :endereco, :cidade, :estado)", $params);
     }
 } else {
     die("[ERRO] Conexão encerrada.");
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php if (empty($erroMensagem)) : ?>
         <div class="alert alert-success text-center p-5 mt-5" role="alert">
             <h1>Cadastro realizado com sucesso</h1>
-            <a href="/bilhete.php">
+            <a href="bilhete.php">
                 <button type="button" class="btn btn-lg btn-warning mt-5">Gerar Bilhete</button>
             </a>
         </div>

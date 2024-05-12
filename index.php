@@ -9,13 +9,13 @@
 
     <style>
         header {
-            background-image: linear-gradient(-45deg, #3a4600, #fbff00);
+            background-image: linear-gradient(-45deg, #af68a0, #5e1d52);
         }
         #estado {
             width: 60px;
         }
         footer {
-            background-image: linear-gradient(-45deg, #3a4600, #fbff00);
+            background-image: linear-gradient(-45deg, #af68a0, #5e1d52);
             padding: 123px;
             color: lightgray;
         }
