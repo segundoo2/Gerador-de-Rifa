@@ -47,7 +47,7 @@ echo "</pre>";
 
       <div class="m-auto p-1 w-50 bg-secondary bilhete">
         <h6 class="m-3 text-justify text-light">
-          <span class="d-flex justify-content-end mx-5">N°: <?= $dados[0]['numero_bilhete'] ?> <br></span>
+          <span class="d-flex justify-content-end mx-5">N°: <br></span>
           Nome: <br> 
           <hr>
           Contato: <br>
