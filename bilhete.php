@@ -5,10 +5,8 @@
   require_once('libraries/Database.php');
   $database = new Database(MYSQL_CONFIG);
   
-  $dados = $database->execute_query("SELECT * FROM dados_comprador");
-  echo "<pre>";
-print_r($dados);
-echo "</pre>";
+  $dados = $database->execute_query("SELECT * FROM dados_comprador ORDER BY numero_bilhete DESC LIMIT 1");
+  print_r($dados);
 ?>
 
 <!doctype html>
@@ -47,8 +45,9 @@ echo "</pre>";
 
       <div class="m-auto p-1 w-50 bg-secondary bilhete">
         <h6 class="m-3 text-justify text-light">
-          <span class="d-flex justify-content-end mx-5">N°: <br></span>
-          Nome: <br> 
+          <span class="d-flex justify-content-end mx-5">N°: <?= $dados[0]['numero_bilhete'] ?> <br></span>
+          Nome: <br>
+          
           <hr>
           Contato: <br>
           <hr>
