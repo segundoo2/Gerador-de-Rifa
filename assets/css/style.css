@@ -1,0 +1,16 @@
+header {
+    background-image: linear-gradient(-45deg, #74d25f, #127f0b);
+}
+
+footer {
+    color: lightgray;
+}
+
+span {
+    font-weight: bold;
+}
+
+.bilhete {
+  border-radius: 10px;
+  background-image: linear-gradient(-45deg, #af68a0, #5e1d52);
+}
