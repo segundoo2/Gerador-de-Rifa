@@ -27,7 +27,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             ':cidade' => $cidade,
             ':estado' => $estado
         ];
-        $query = $database->execute_non_query("INSERT INTO dados_comprador (nome, contato, endereco, cidade, estado) VALUES (:nome, :contato, :endereco, :cidade, :estado)", $params);
+        $query = $database->execute_non_query(
+        "INSERT INTO dados_comprador (
+            nome,
+            contato,
+            endereco,
+            cidade,
+            estado
+            ) 
+        VALUES (
+            :nome,
+            :contato,
+            :endereco,
+            :cidade,
+            :estado
+            )", $params);
     }
 } else {
     die("[ERRO] Conexão encerrada.");

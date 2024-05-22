@@ -5,7 +5,11 @@
   require_once('libraries/Database.php');
   $database = new Database(MYSQL_CONFIG);
   
-  $dados = $database->execute_query("SELECT * FROM dados_comprador ORDER BY numero_bilhete DESC LIMIT 1");
+  $dados = $database->execute_query (
+    "SELECT * 
+    FROM dados_comprador 
+    ORDER BY numero_bilhete DESC LIMIT 1"
+  );
   print_r($dados);
   die();
 
