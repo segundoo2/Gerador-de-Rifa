@@ -57,40 +57,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Cadastro do comprador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <style>
-        header {
-            background-image: linear-gradient(-45deg, #3a4600, #fbff00);
-            
-        }
-
-        #estado {
-            width: 60px;
-        }
-
-        footer {
-            background-image: linear-gradient(-45deg, #3a4600, #fbff00);
-            padding: 77px;
-            color: lightgray;
-        }
-        span {
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
 
     <?php if (empty($erroMensagem)) : ?>
-        <div class="alert alert-success text-center p-5 mt-5" role="alert">
+        <?php require_once("header.php")?>
+        
+        <div class="alert sucesso text-center p-5 mt-5" role="alert">
             <h1>Cadastro realizado com sucesso</h1>
             <a href="bilhete.php">
-                <button type="button" class="btn btn-lg btn-warning mt-5">Gerar Bilhete</button>
+                <button type="button" class="btn btn-lg btn-warning mt-5 text-white fw-bold">Gerar Bilhete</button>
             </a>
         </div>
+        
+        <?php require_once("footer.php")?>
     <?php else : ?>
-        <header>
-            <h3 class="text-center text-light p-5 fw-bolder fs-1">Cadastro Comprador</h3>
-        </header>
+        <?php require_once("header.php") ?>
+
         <div class="container">
 
             <form action="cadastro.php" method="post">
@@ -136,9 +120,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
         </div>
 
-        <footer class="text-center mt-5">
-            <h6>Desenvolvido por: <span>Edilson Segundo</span></h6>
-        </footer>
+        <?php require_once("footer.php")?>
+
     <?php endif; ?>
 
     <script src="assets/js/formatarNumero.js"></script>

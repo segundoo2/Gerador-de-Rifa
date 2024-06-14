@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro do comprador</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <style>
-        header {
-            background-image: linear-gradient(-45deg, #af68a0, #5e1d52);
-        }
-        #estado {
-            width: 60px;
-        }
-        footer {
-            background-image: linear-gradient(-45deg, #af68a0, #5e1d52);
-            padding: 123px;
-            color: lightgray;
-        }
-        span {
-            font-weight: bold;
-        }
-
-    </style>
-</head>
+<?php require_once("header.php")?>
 
 <body>
-    <header>
-        <h3 class="text-center text-light p-5 fw-bolder fs-1">Cadastro Comprador</h3>
-    </header>
     <div class="container">
         <form action="cadastro.php" method="post">
             <div class="row mt-3">
@@ -70,9 +41,7 @@
         </form>
     </div>
 
-    <footer class="text-center mt-5">
-        <h6>Desenvolvido por: <span>Edilson Segundo</span></h6>
-    </footer>
+    <?php require_once("footer.php")?>
 
     <script src="assets/js/formatarNumero.js"></script>
     
